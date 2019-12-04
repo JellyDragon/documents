@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SpringBoot | Xiao&#39;s blog</title>
+    <meta name="description" content="我的个人网站">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.8bcf7c97.css" as="style"><link rel="preload" href="/assets/js/app.dbca5a71.js" as="script"><link rel="preload" href="/assets/js/2.9ef35b3c.js" as="script"><link rel="preload" href="/assets/js/8.c710b65a.js" as="script"><link rel="prefetch" href="/assets/js/10.773a0553.js"><link rel="prefetch" href="/assets/js/11.8a56c68c.js"><link rel="prefetch" href="/assets/js/3.37e0feac.js"><link rel="prefetch" href="/assets/js/4.971fb7ff.js"><link rel="prefetch" href="/assets/js/5.d6913d93.js"><link rel="prefetch" href="/assets/js/6.05fa1426.js"><link rel="prefetch" href="/assets/js/7.2655500b.js"><link rel="prefetch" href="/assets/js/9.04fffe84.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8bcf7c97.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Xiao's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">博客</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">博客</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/guide/SpringBoot.html" class="active sidebar-link">SpringBoot</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/SpringBoot.html#yaml" class="sidebar-link">YAML</a></li><li class="sidebar-sub-header"><a href="/guide/SpringBoot.html#ymal语法" class="sidebar-link">YMAL语法</a></li></ul></li><li><a href="/guide/JAVA基础.html" class="sidebar-link">JAVA基础</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="springboot"><a href="#springboot" class="header-anchor">#</a> SpringBoot</h1> <h2 id="yaml"><a href="#yaml" class="header-anchor">#</a> YAML</h2> <p>YAML (YMAL Ain't Markup Language)</p> <p>​			YAML A Markup Language: 是一个标记语言</p> <p>​			YAML isn'not Markup Language: 不是一个标记语言</p> <p>标记语言：</p> <p>​			以前的配置文件；大多都使用的是xxxx.xml文件；</p> <p>​			YAML<strong>以数据为中心</strong>，比json，xml更适合做配置文件；</p> <p>YAML：配置服务器端口实例</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+	<span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+</code></pre></div><p>XML：配置服务器端口</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>port</span><span class="token punctuation">&gt;</span></span>8081<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>port</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>server</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="ymal语法"><a href="#ymal语法" class="header-anchor">#</a> YMAL语法</h2> <h3 id="_1-基本语法"><a href="#_1-基本语法" class="header-anchor">#</a> 1 基本语法</h3> <p>key:(空格)value :表示一堆键值对（空格必须有）</p> <p>以<strong>空格</strong>的缩进来控制层级关系；只要是左对齐的一列数据都是同一个层级的</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">server</span><span class="token punctuation">:</span>
+    <span class="token key atrule">prot</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+    <span class="token key atrule">path</span><span class="token punctuation">:</span> /hello
+</code></pre></div><p>属性和值也是大小写敏感；</p> <h3 id="_2-值的写法"><a href="#_2-值的写法" class="header-anchor">#</a> 2 值的写法</h3> <h4 id="_2-1-字面量：普通的值（数字，字符串，布尔）"><a href="#_2-1-字面量：普通的值（数字，字符串，布尔）" class="header-anchor">#</a> 2.1 字面量：普通的值（数字，字符串，布尔）</h4> <p>​		k: v :字面直接来写；</p> <p>​				字符串默认不用加上单引号或双引号；</p> <p>​				&quot;&quot;:双引号不会转义字符串中的特殊字符，会输出特殊字符本身想表达的意思；</p> <p><mark>name: &quot;zhangsan \n lisi&quot;</mark>;双引号包裹下会将\n转换成换行，会输出: <mark>zhangsan 换行 list</mark></p> <p>​				'':单引号会转义字符串中的特殊字符.特殊字符最终只是一个普通的字符串；</p> <p><mark>name: 'zhangsan \n lisi'</mark>;单引号包裹下不会将\n转换成换行，会输出: <mark>zhangsan \n list</mark></p> <h4 id="_2-2-对象，map（属性和值）（键值对）"><a href="#_2-2-对象，map（属性和值）（键值对）" class="header-anchor">#</a> 2.2 对象，Map（属性和值）（键值对）</h4> <p>​		k: v:在下一行写对象的属性和值的关系，注意缩进</p> <p>​		对象也是k: v的方式</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">friends</span><span class="token punctuation">:</span> 
+        <span class="token key atrule">name</span><span class="token punctuation">:</span> zhangsan
+        <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">20</span>
+</code></pre></div><p>​		行内写法：</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">friends</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token key atrule">name</span><span class="token punctuation">:</span> zhangsan<span class="token punctuation">,</span><span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">18</span><span class="token punctuation">}</span>			
+</code></pre></div><h4 id="_2-3-数组（list，set）"><a href="#_2-3-数组（list，set）" class="header-anchor">#</a> 2.3 数组（list，set）</h4> <p>​	用<mark>- 值</mark>的方式来表示数组中的一个元素</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">pets</span><span class="token punctuation">:</span>
+ <span class="token punctuation">-</span> cat
+ <span class="token punctuation">-</span> dog
+ <span class="token punctuation">-</span> pig
+</code></pre></div><p>​	行内写法</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">pets</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>cat<span class="token punctuation">,</span>dog<span class="token punctuation">,</span>pig<span class="token punctuation">]</span>
+</code></pre></div><h3 id="_3-获取配置文件值注入"><a href="#_3-获取配置文件值注入" class="header-anchor">#</a> 3 获取配置文件值注入</h3> <h4 id="_3-1-yaml配置文件值"><a href="#_3-1-yaml配置文件值" class="header-anchor">#</a> 3.1 yaml配置文件值</h4> <p>配置文件:</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">person</span><span class="token punctuation">:</span>
+    <span class="token key atrule">lastName</span><span class="token punctuation">:</span> zhangsan
+    <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">18</span>
+    <span class="token key atrule">boss</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">maps</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token key atrule">k1</span><span class="token punctuation">:</span> v1<span class="token punctuation">,</span><span class="token key atrule">k2</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">}</span>
+    <span class="token key atrule">lists</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> lisi
+      <span class="token punctuation">-</span> zhaoliu
+    <span class="token key atrule">dog</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> 小狗
+      <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">2</span>
+</code></pre></div><p>javaBean:</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 将配置文件中配置的每一个属性的值映射到这个组件中
+ * @ConfigurationProperties: 告诉springboot将本类中所有属性和配置文件中相关的配置绑定
+ *
+ *      prefix = “person”： 配置文件中哪个下面的所有属性进行一一映射
+ *只有这个组件时容器中的组件，才能使用容器提供的@ConfigurationProperties功能
+ */</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix<span class="token operator">=</span><span class="token string">&quot;person&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> lastName<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Boolean</span> boos<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> maps<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> lists<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Dog</span> dog<span class="token punctuation">;</span>
+
+</code></pre></div><p>我们可以导入配置文件处理器，以后编写配置就能有提示了</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token comment">&lt;!-- 导入配置文件处理器，配置文件进行绑定就会有提示--&gt;</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">&gt;</span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">&gt;</span></span>spring-boot-configuration-processor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>optional</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>optional</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="_3-2-value获取值和-configurationproperties获取值比较"><a href="#_3-2-value获取值和-configurationproperties获取值比较" class="header-anchor">#</a> 3.2 @Value获取值和@ConfigurationProperties获取值比较</h4> <table><thead><tr><th></th> <th>@ConfigurationProperties</th> <th>@Value</th></tr></thead> <tbody><tr><td>功能</td> <td>批量注入配置文件中的属性</td> <td>必须一个个指定</td></tr> <tr><td>松散绑定(松散语法)</td> <td>支持</td> <td>不支持</td></tr> <tr><td>SpEL</td> <td>不支持</td> <td>支持</td></tr> <tr><td>JSR303数据校验</td> <td>支持</td> <td>不支持</td></tr> <tr><td>复杂类型封装</td> <td>支持</td> <td>不支持</td></tr></tbody></table> <p>配置文件是yaml还是properties他们都能获取值</p> <p>如果说，我们只是在某个业务逻辑中需要获取一下配置文件中的某项值，使用@Value</p> <p>如果说，我们专门编写了一个javaBean来和配置文件进行映射；我们就直接使用@ConfigurationProperties；</p> <h4 id="_3-3-配置文件注入值数据校验"><a href="#_3-3-配置文件注入值数据校验" class="header-anchor">#</a> 3.3 配置文件注入值数据校验</h4> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix<span class="token operator">=</span><span class="token string">&quot;person&quot;</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Validated</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/*
+    * &lt;bean class=&quot;person&quot;&gt;
+        &lt;property name=&quot;lastName&quot; value=&quot;字面量/￥{key}从环境变量，配置文件中获取值/#{SpEL}&quot;&gt;&lt;/property&gt;
+    * &lt;/bean&gt;
+    *
+    * */</span>
+    <span class="token annotation punctuation">@Email</span>
+<span class="token comment">//    @Value(&quot;${person.last-name}&quot;)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> lastName<span class="token punctuation">;</span>
+    <span class="token comment">//    @Value(&quot;#{11*2}&quot;)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+<span class="token comment">//    @Value(&quot;true&quot;)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Boolean</span> boos<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> maps<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> lists<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Dog</span> dog<span class="token punctuation">;</span>
+</code></pre></div><h4 id="_3-4-propertysource-importresource"><a href="#_3-4-propertysource-importresource" class="header-anchor">#</a> 3.4  @PropertySource&amp;@ImportResource</h4> <p>​	@PropertySource: 加载指定的配置文件；</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/**
+ * 将配置文件中配置的每一个属性的值映射到这个组件中
+ * @ConfigurationProperties: 告诉springboot将本类中所有属性和配置文件中相关的配置绑定
+ *
+ *      prefix = “person”： 配置文件中哪个下面的所有属性进行一一映射
+ *只有这个组件时容器中的组件，才能使用容器提供的@ConfigurationProperties功能
+ * @ConfigurationProperties(prefix=&quot;person&quot;)默认从全局配置文件中获取值；
+ */</span>
+
+<span class="token annotation punctuation">@PropertySource</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;classpath:Person.properties&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix<span class="token operator">=</span><span class="token string">&quot;person&quot;</span><span class="token punctuation">)</span>
+<span class="token comment">//@Validated</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">/*
+    * &lt;bean class=&quot;person&quot;&gt;
+        &lt;property name=&quot;lastName&quot; value=&quot;字面量/￥{key}从环境变量，配置文件中获取值/#{SpEL}&quot;&gt;&lt;/property&gt;
+    * &lt;/bean&gt;
+    *
+    * */</span>
+<span class="token comment">//    @Email</span>
+<span class="token comment">//    @Value(&quot;${person.last-name}&quot;)</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> lastName<span class="token punctuation">;</span>
+<span class="token comment">//    @Value(&quot;#{11*2}&quot;)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span>
+<span class="token comment">//    @Value(&quot;true&quot;)</span>
+    <span class="token keyword">private</span> <span class="token class-name">Boolean</span> boos<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> maps<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Object</span><span class="token punctuation">&gt;</span></span> lists<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Dog</span> dog<span class="token punctuation">;</span>
+</code></pre></div><p>@ImportResource: 导入Spring的配置文件，让配置文件里面的内容生效；</p> <p>SpringBoot里面没有Spring的配置文件，我们自己编写的配置文件，也不能自动识别；想让Spring的配置文件生效，加载进来；@<strong>ImportResource</strong>标注在一个配置类上</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token annotation punctuation">@ImportResource</span><span class="token punctuation">(</span>locations <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;classpath:Beans.xml&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+导入<span class="token class-name">Spring</span>的配置文件让其生效
+</code></pre></div><p>不再编写SPring的配置文件</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">&quot;1.0&quot;</span> encoding<span class="token operator">=</span><span class="token string">&quot;UTF-8&quot;</span><span class="token operator">?</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">&quot;http://www.springframework.org/schema/beans&quot;</span>
+       xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+       xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span><span class="token string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span><span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">&quot;helloService&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;com.how2java.springboot.Service.HelloSevice&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">&gt;</span>
+</code></pre></div><p>SpringBoot推荐给容器中添加组件的方式;推荐使用全注解的方式</p> <p>​    1、配置类======Spring配置文件</p> <p>​	2、使用@Bean给容器中添加组件</p> <div class="language-java extra-class"><pre class="language-java"><code><span class="token comment">/*
+* @Configuration:指明当前类是一个配置类；就是来代替之前的spring配置文件
+*
+* 在配置文件中是通过&lt;bean&gt;&lt;/bean&gt;标签来添加组件
+* */</span>
+<span class="token annotation punctuation">@Configuration</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyAppConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">//将方法返回到容器中；容器中这个组件默认的id就是方法名</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token keyword">public</span> <span class="token class-name">HelloSevice</span> <span class="token function">helloSevice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;配置类@Bean给容器中添加组件了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">HelloSevice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="_4-配置文件占位符"><a href="#_4-配置文件占位符" class="header-anchor">#</a> 4 配置文件占位符</h3> <h4 id="_1-随机数"><a href="#_1-随机数" class="header-anchor">#</a> 1.随机数</h4> <div class="language-java extra-class"><pre class="language-java"><code>$<span class="token punctuation">{</span>random<span class="token punctuation">.</span>value<span class="token punctuation">}</span>、$<span class="token punctuation">{</span>random<span class="token punctuation">.</span><span class="token keyword">int</span><span class="token punctuation">}</span>、$<span class="token punctuation">{</span>random<span class="token punctuation">.</span><span class="token keyword">long</span><span class="token punctuation">}</span>、$<span class="token punctuation">{</span>random<span class="token punctuation">.</span><span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">}</span>、$<span class="token punctuation">{</span>random<span class="token punctuation">.</span><span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">1024</span><span class="token punctuation">,</span><span class="token number">65536</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+</code></pre></div><h4 id="_2-占位符获取之前配置的值，如果没有可以使用：指定默认值"><a href="#_2-占位符获取之前配置的值，如果没有可以使用：指定默认值" class="header-anchor">#</a> 2.占位符获取之前配置的值，如果没有可以使用：指定默认值</h4> <div class="language-properties extra-class"><pre class="language-properties"><code><span class="token attr-name">person.last-name</span><span class="token punctuation">=</span><span class="token attr-value">李四${random.uuid}</span>
+<span class="token attr-name">person.age</span><span class="token punctuation">=</span><span class="token attr-value">${random.int}</span>
+<span class="token attr-name">person.boos</span><span class="token punctuation">=</span><span class="token attr-value">false</span>
+<span class="token attr-name">person.maps.k1</span><span class="token punctuation">=</span><span class="token attr-value">v1</span>
+<span class="token attr-name">person.maps.k2</span><span class="token punctuation">=</span><span class="token attr-value">14</span>
+<span class="token attr-name">person.lists</span><span class="token punctuation">=</span><span class="token attr-value">a,b.c</span>
+<span class="token attr-name">person.dog.name</span><span class="token punctuation">=</span><span class="token attr-value">${person.hello:hello}的dog</span>
+<span class="token attr-name">person.dog.age</span><span class="token punctuation">=</span><span class="token attr-value">12</span>
+</code></pre></div><h3 id="_5-profile"><a href="#_5-profile" class="header-anchor">#</a> 5 Profile</h3> <h4 id="_1-多profile文件"><a href="#_1-多profile文件" class="header-anchor">#</a> 1.多Profile文件</h4> <p>我们在主配置文件编写的时候，文件名可以是 application-{profile}.properties/yml</p> <p>默认使用application.properties的配置；</p> <h4 id="_2-yml支持多文档块方式"><a href="#_2-yml支持多文档块方式" class="header-anchor">#</a> 2.yml支持多文档块方式</h4> <div class="language-yaml extra-class"><pre class="language-yaml"><code>
+<span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">profiles</span><span class="token punctuation">:</span>
+    <span class="token key atrule">active</span><span class="token punctuation">:</span> prod
+<span class="token punctuation">---</span>
+<span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8082</span>
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">profiles</span><span class="token punctuation">:</span> dev
+<span class="token punctuation">---</span>
+<span class="token key atrule">spring</span><span class="token punctuation">:</span>
+  <span class="token key atrule">profiles</span><span class="token punctuation">:</span> prod <span class="token comment">#指定属于哪个环境</span>
+
+<span class="token key atrule">server</span><span class="token punctuation">:</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8084</span>
+</code></pre></div><h4 id="_3-激活指定profile"><a href="#_3-激活指定profile" class="header-anchor">#</a> 3.激活指定Profile</h4> <h5 id="_1-在配置文件中指定"><a href="#_1-在配置文件中指定" class="header-anchor">#</a> 1.在配置文件中指定</h5> <div class="language-properties extra-class"><pre class="language-properties"><code><span class="token attr-name">spring.profiles.active</span><span class="token punctuation">=</span><span class="token attr-value">dev</span>
+</code></pre></div><h5 id="_2-命令行"><a href="#_2-命令行" class="header-anchor">#</a> 2.命令行</h5> <p>​	--spring.profiles.active=dev</p> <h5 id="_3-虚拟机参数"><a href="#_3-虚拟机参数" class="header-anchor">#</a> 3.虚拟机参数</h5> <p>​	-Dspring-profiles.active=dev</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/guide/JAVA基础.html">JAVA基础</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.dbca5a71.js" defer></script><script src="/assets/js/2.9ef35b3c.js" defer></script><script src="/assets/js/8.c710b65a.js" defer></script>
+  </body>
+</html>
